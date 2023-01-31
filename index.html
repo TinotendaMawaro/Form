@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dean Wagner">
+        <title>Sign Up!</title>
+        <link rel="icon" type="image/png" href="https://www.theodinproject.com/favicon-32x32.png">
+        <link rel="stylesheet" href="./res/signup.css">
+        <script src="./res/signup.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                handleForm();
+            });
+        </script>
+    </head>
+    <!-- -------------- -!>
+         Sign Up Form
+
+        By: Tinotenda Mawaro
+      tmawaro25@gmail.com
+
+        Assignment for:
+       The Odin Project
+      theodinproject.com
+    <--- -------------- -->
+    <body>
+
+        <!-- ------------ -!>
+                Aside
+        <--- ------------ -->
+        <aside>
+            <h1>
+                <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="Odin Project Logo">
+                Odin
+            </h1>
+            <cite>
+                Photo by <a href="https://unsplash.com/@conradz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Conrad Ziebland</a>
+                on <a href="https://unsplash.com/images/nature/seascape?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+            </cite>
+        </aside>
+
+        <!-- ------------ -!>
+                Main
+        <--- ------------ -->
+        <main>
+
+            <!-- ------------ -!>
+                   Header
+            <--- ------------ -->
+            <header>
+                <p>Welcome</p>
+
+                <a class="github-link" title="GitHub Repo for this Project" href="https://github.com/deanwagner/odin_project/tree/main/signup"><svg class="github-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path class="github-path" d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"/></svg></a>
+            </header>
+
+            <!-- ------------ -!>
+                    Form
+            <--- ------------ -->
+            <form>
+                <fieldset>
+                    <h2>New Account</h2>
+                    <label for="first-name" title="Required: Letters Only">
+                        First Name<span>*</span>
+                        <input type="text" id="first-name" pattern="[a-zA-Z]+" min="2" max="15" required>
+                    </label>
+                    <label for="last-name" title="Required: Letters Only">
+                        Last Name<span>*</span>
+                        <input type="text" id="last-name" pattern="[a-zA-Z]+" min="2" max="15" required>
+                    </label>
+                    <label for="email-address" title="Required: you@service.com">
+                        Email<span>*</span>
+                        <input type="email" id="email-address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="you@service.com" required>
+                    </label>
+                    <label for="phone-number" title="Optional: 123-456-7890">
+                        Phone Number
+                        <input type="tel" id="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="263 778 141 047">
+                    </label>
+                    <label for="password-one" title="Required: At least 8 characters, 1 Upper, 1 Lower, 1 Number">
+                        Password<span>*</span>
+                        <input type="password" id="password-one" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8" required>
+                    </label>
+                    <label for="password-two" title="Required: Must Match">
+                        Confirm Password<span>*</span>
+                        <input type="password" id="password-two" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8" required>
+                    </label>
+                </fieldset>
+                <button type="submit">Create Account</button>
+                <div>Already have an account? <a href="#">Log in</a></div>
+            </form>
+            
+            <!-- ------------ -!>
+                   Footer
+            <--- ------------ -->
+            <footer>
+                Created by <a href="https://tinotendamawaro.net/">Tinotenda Mawaro</a>
+                for <a href="https://theodinproject.com/">The Odin Project</a>
+            </footer>
+        </main>
+    </body>
+</html>
